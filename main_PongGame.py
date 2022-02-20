@@ -1,3 +1,7 @@
+"""
+приложение построена на базе учебного примера
+https://kivy.org/doc/stable/tutorials/pong.html#
+"""
 from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.properties import NumericProperty, ReferenceListProperty, ObjectProperty
@@ -14,6 +18,7 @@ class PongBall(Widget):
     def move(self):
         self.pos = Vector(*self.velocity) + self.pos
 
+
 class PongGame(Widget):
     ball = ObjectProperty(None)
 
@@ -28,6 +33,7 @@ class PongGame(Widget):
         if (self.ball.x < 0) or (self.ball.right > self.width):
             self.ball.velocity_x *= -1
 
+
 class PongApp(App):
     def build(self):
         game = PongGame()
@@ -39,4 +45,3 @@ class PongApp(App):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     PongApp().run()
-
