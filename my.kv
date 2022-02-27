@@ -1,2 +1,11 @@
-<Label>:
-    text: 'Hello Worldик'
+<MyWidget>:
+	label_widget: label_widget.__self__
+	Button:
+		text: 'Add Button'
+		on_press: root.add_widget(label_widget)
+	Button:
+		text: 'Remove Button'
+		on_press: root.remove_widget(label_widget)
+	Label:
+		id: label_widget
+		text: 'widget'
