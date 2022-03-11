@@ -32,12 +32,21 @@ class AllApp(App):
 
     def build(self):
         layout_subjects = GridLayout(cols=1, size_hint=(None, None), width=400, height=1000)
-        subjects = ['Logic Building', 'SQL Server', 'Advanced Excel',
-                    'Programming in Java', 'HTML5, CSS, JavaScript, JQuery', 'Web Development using Servlet and JSP',
-                    'Android Development using Java', 'Hibernate, Spring and JSF', 'Application Testing using JUnit ',
-                    'Programming using C# ', 'Web development using .Net Framework',
-                    'Cross Platform app for Microsoft PlayStore', 'distributed application with .net framwork',
-                    'Machine Learning using python', 'Big Data using R and Python']
+        subjects = ['Logic Building',
+                    'SQL Server',
+                    'Advanced Excel',
+                    'Programming in Java',
+                    'HTML5, CSS, JavaScript, JQuery',
+                    'Web Development using Servlet and JSP',
+                    'Android Development using Java',
+                    'Hibernate, Spring and JSF',
+                    'Application Testing using JUnit ',
+                    'Programming using C# ',
+                    'Web development using .Net Framework',
+                    'Cross Platform app for Microsoft PlayStore',
+                    'distributed application with .net framwork',
+                    'Machine Learning using python',
+                    'Big Data using R and Python']
         subjects_d = {}
         for subject in subjects:
             subjects_d[subject] = subject
