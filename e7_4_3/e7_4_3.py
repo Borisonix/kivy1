@@ -19,7 +19,7 @@ class SaveDialog(FloatLayout):
 
 class Root(FloatLayout):
     loadfile = ObjectProperty(None)
-    ssavefile = ObjectProperty(None)
+    savefile = ObjectProperty(None)
     text_input = ObjectProperty(None)
 
     def dismiss_popup(self):
@@ -48,8 +48,11 @@ class Root(FloatLayout):
 class Editor(App):
     pass
 
+
 Factory.register('Root', cls=Root)
 Factory.register('LoadDialog', cls=LoadDialog)
 Factory.register('SaveDialog', cls=SaveDialog)
+
+
 if __name__ == '__main__':
     Editor().run()
