@@ -17,12 +17,18 @@ class Person:
         return f'{self.name} имеет оклад {self.pay} должность: {(self.job if self.job != None else "не назначен!")}'
 
 
-class Manager(Person):
+class Manager():
     def __init__(self, name, pay):
-        Person.__init__(self, name, 'mng', pay)
+        self.person = Person(name, 'mng', pay)  # Внедрить объект Person
 
     def giveRaise(self, percent, bonus=.10):
-        Person.giveRaise(self, percent + bonus)
+        self.person.giveRaise(percent + bonus)  # Перехватить и делегировать
+
+    def __getattr__(self, attr):
+        return getattr(self.person, attr)    # Делегировать все остальные атрибуты
+
+    def __repr__(self):
+        return str(self.person)
 
 
 if __name__ == "__main__":
