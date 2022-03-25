@@ -1,4 +1,9 @@
-class Person:
+from classtools import AttrDisplay
+
+class Person(AttrDisplay):
+    """
+    Создает и обрабатывает записи о людях
+    """
     def __init__(self, name, job=None, pay=0):
         self.name = name
         self.job = job
@@ -9,16 +14,24 @@ class Person:
 
     def giveRaise(self, percent):
         self.pay = int(self.pay * (1 + percent))
-
+""" удалено после внедрения модуля classtools.py
     def __repr__(self):  # Добавленный метод
         return '[Person: %s, %s]' % (self.name, self.pay)
 
     def __str__(self):  # Добавленный метод
         return f'{self.name} имеет оклад {self.pay} должность: {(self.job if self.job != None else "не назначен!")}'
-
+"""
 
 class Manager(Person):
+    """
+    Настроенная версия Person co специальными требованиями
+    """
     def __init__(self, name, pay):
+        """
+        :param name:  - имя
+        :param pay:   - оклад
+        - должность 'mng' вставится автоматически
+        """
         Person.__init__(self, name, 'mng', pay)
 
     def giveRaise(self, percent, bonus=.10):
