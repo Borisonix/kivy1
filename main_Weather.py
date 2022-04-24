@@ -1,10 +1,10 @@
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
-from kivy. import ObjectProperty
+from kivy.properties import ObjectProperty
 
 
 class AddLocationForm(BoxLayout):
-    search_input =
+    search_input = ObjectProperty()
     def search_location(self):
         print("The user searched for '{}'".format(self.search_input.text))
 
