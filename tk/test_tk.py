@@ -1,5 +1,6 @@
 from tkinter import *
 
+
 def changeBut(event, button):
     # if button.cget("bg") == "white":
     if button["bg"] == "white":
@@ -10,6 +11,11 @@ def changeBut(event, button):
         button.configure(fg="white")
     i, j = button["text"].split('_')
     print(i, j)
+    attrs = []
+    for key in sorted(button.__dict__):
+        attrs.append('%s=%s' % (key, getattr(button, key)))
+    print(', '.join(attrs))
+
 
 
 root = Tk()
