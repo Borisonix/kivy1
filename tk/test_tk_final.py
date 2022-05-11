@@ -23,9 +23,6 @@ def Save(event):
         arrayX2[i] = arrayX1[i].get()
     print(arrayY2, arrayX2)
 
-
-
-
     for j in range(l):
         arrayY2[j].strip()
         c = []
@@ -43,9 +40,6 @@ def Save(event):
              parY[j] = c
              continue
             parY[j] = c
-
-
-
 
     for j in range(l):
         arrayX2[j].strip()
@@ -122,7 +116,7 @@ def checker():
 
 root = Tk()
 root.title("Создание японского кроссворда")
-l = 5
+l = 10
 
 mas = [0] * l
 parY = [[]] * l
@@ -139,8 +133,8 @@ Label(root, text='2. Заполнить параметры, находящиес
 Label(root, text='Если групп несколько, то вводите параметры через пробел.', font='Arial 12').grid(column=0, row=3)
 Label(root, text='Например: если в первой строке мы закрасим 2 группы клеток, в каждой из которых 3 клетки,', font='Arial 12').grid(column=0, row=4)
 Label(root, text='в параметре нужно написать: "3 3"', font='Arial 12').grid(column=0, row=5)
-Label(root, text='3. После ввода параметров нажмите клавишу Enter!', font='Arial 12').grid(column=0, row=6)
-Label(root, text='3. Когда все заполнено, нажмите кнопку "Проверка".', font='Arial 12').grid(column=0, row=7)
+Label(root, text='3. После ввода параметров нажмите клавишу Enter!', font='Arial 12', fg='red').grid(column=0, row=6)
+Label(root, text='4. Когда все заполнено, нажмите кнопку "Проверка".', font='Arial 12').grid(column=0, row=7)
 
 for i in range(l):
     for j in range(l):
