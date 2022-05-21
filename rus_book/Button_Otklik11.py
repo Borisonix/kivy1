@@ -7,7 +7,7 @@ Button:
     text: 'Это текст'
     size_hint: .5, .5
     pos_hint: {'center_x': .5, 'center_y': .5}
-    on_press: app.press_button (root)
+    on_press: app.press_button(root)
 """
 
 
@@ -16,7 +16,7 @@ class MainApp(App):
         return Builder.load_string(KV)
 
     def press_button (self, instance):
-        print ('Вы нажали на кнопку!')
+        print('Вы нажали на кнопку!')
 
 
 MainApp().run()

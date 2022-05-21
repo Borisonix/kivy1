@@ -1,0 +1,39 @@
+<MyTextInput@TextInput>
+    size_hint:.5,.3
+    font_size: 18
+
+GridLayout:
+    cols: 2
+    rows: 5
+    row_force_default: True     # будет проигнорирована высота (size_hint_y) дочернего элемента
+    row_default_height: 50
+    Label:
+        text: 'Сумма остатка кредита, руб:'
+    MyTextInput:
+        id: tinp_summa
+        text: '2455000'
+    Label:
+        text: 'Процентная ставка, %:'
+    MyTextInput:
+        id: tinp_proc
+        text: '9'
+    Label:
+        text: 'Кол-во месяцев: '
+    MyTextInput:
+        id: tinp_k_mes
+        text: '240'
+    Label:
+        text: 'Размер аннуитентного платежа, руб: '
+        font_size: 24
+    Label:
+        text: '...'
+        align: 'left'
+        id: lbl_plata
+        size_hint:.5,.3
+        font_size: 24
+    Label:
+        text: ''
+    Button:
+        text: 'Расчитать'
+        size_hint:.5,.3
+        on_press: lbl_plata.text = app.raschet(tinp_summa.text, tinp_proc.text, tinp_k_mes.text)
