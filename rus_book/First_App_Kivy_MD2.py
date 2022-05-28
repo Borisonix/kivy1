@@ -10,6 +10,6 @@ class MainApp(MDApp):
         return label
 
 if __name__ == '__main__':
-    app = MainApp()       # Задание имени приложения
-    app.run()            # запуск приложения
+    app = MainApp()         # Задание имени приложения
+    app.run()               # запуск приложения
 
