@@ -6,7 +6,7 @@ KV = """
 BoxLayout:
     orientation: 'vertical'
     padding: [50, 50, 50, 50]
-    spacing: 10
+    # spacing: 10
     Button:
         text: 'Кнопка 1'
     Button:
@@ -16,7 +16,6 @@ BoxLayout:
     Button:
         text: 'Кнопка 4'
 """
-
 
 class MainApp(App):
     def build(self):
